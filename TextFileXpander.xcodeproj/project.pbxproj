@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B1DEC4119A20FBA00E8AF12 /* TextFileXpander.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3B1DEC4019A20FBA00E8AF12 /* TextFileXpander.icns */; };
+		3B4BFA9A19A16E32003B8F93 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BFA9919A16E32003B8F93 /* Cocoa.framework */; };
+		3B4BFAA419A16E32003B8F93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BFAA219A16E32003B8F93 /* InfoPlist.strings */; };
+		3B4BFAA619A16E32003B8F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BFAA519A16E32003B8F93 /* main.m */; };
+		3B4BFAAA19A16E32003B8F93 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BFAA819A16E32003B8F93 /* Credits.rtf */; };
+		3B4BFAAD19A16E32003B8F93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BFAAC19A16E32003B8F93 /* AppDelegate.m */; };
+		3B4BFAB019A16E32003B8F93 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BFAAE19A16E32003B8F93 /* MainMenu.xib */; };
+		3B4BFAB219A16E32003B8F93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BFAB119A16E32003B8F93 /* Images.xcassets */; };
+		3B4BFAB919A16E32003B8F93 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BFAB819A16E32003B8F93 /* XCTest.framework */; };
+		3B4BFABA19A16E32003B8F93 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BFA9919A16E32003B8F93 /* Cocoa.framework */; };
+		3B4BFAC219A16E32003B8F93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BFAC019A16E32003B8F93 /* InfoPlist.strings */; };
+		3B4BFAC419A16E32003B8F93 /* TextFileXpanderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BFAC319A16E32003B8F93 /* TextFileXpanderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B4BFABB19A16E32003B8F93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B4BFA8E19A16E32003B8F93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B4BFA9519A16E32003B8F93;
+			remoteInfo = TextFileXpander;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B1DEC4019A20FBA00E8AF12 /* TextFileXpander.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = TextFileXpander.icns; sourceTree = "<group>"; };
+		3B4BFA9619A16E32003B8F93 /* TextFileXpander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = TextFileXpander.app; path = TextFileXpander.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4BFA9919A16E32003B8F93 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3B4BFA9C19A16E32003B8F93 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3B4BFA9D19A16E32003B8F93 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3B4BFA9E19A16E32003B8F93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B4BFAA119A16E32003B8F93 /* TextFileXpander-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextFileXpander-Info.plist"; sourceTree = "<group>"; };
+		3B4BFAA319A16E32003B8F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B4BFAA519A16E32003B8F93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B4BFAA719A16E32003B8F93 /* TextFileXpander-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextFileXpander-Prefix.pch"; sourceTree = "<group>"; };
+		3B4BFAA919A16E32003B8F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3B4BFAAB19A16E32003B8F93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B4BFAAC19A16E32003B8F93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B4BFAAF19A16E32003B8F93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3B4BFAB119A16E32003B8F93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3B4BFAB719A16E32003B8F93 /* TextFileXpanderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TextFileXpanderTests.xctest; path = TextFileXpanderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4BFAB819A16E32003B8F93 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3B4BFABF19A16E32003B8F93 /* TextFileXpanderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextFileXpanderTests-Info.plist"; sourceTree = "<group>"; };
+		3B4BFAC119A16E32003B8F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B4BFAC319A16E32003B8F93 /* TextFileXpanderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFileXpanderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B4BFA9319A16E32003B8F93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4BFA9A19A16E32003B8F93 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4BFAB419A16E32003B8F93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4BFABA19A16E32003B8F93 /* Cocoa.framework in Frameworks */,
+				3B4BFAB919A16E32003B8F93 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B4BFA8D19A16E32003B8F93 = {
+			isa = PBXGroup;
+			children = (
+				3B1DEC4019A20FBA00E8AF12 /* TextFileXpander.icns */,
+				3B4BFA9F19A16E32003B8F93 /* TextFileXpander */,
+				3B4BFABD19A16E32003B8F93 /* TextFileXpanderTests */,
+				3B4BFA9819A16E32003B8F93 /* Frameworks */,
+				3B4BFA9719A16E32003B8F93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B4BFA9719A16E32003B8F93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B4BFA9619A16E32003B8F93 /* TextFileXpander.app */,
+				3B4BFAB719A16E32003B8F93 /* TextFileXpanderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B4BFA9819A16E32003B8F93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B4BFA9919A16E32003B8F93 /* Cocoa.framework */,
+				3B4BFAB819A16E32003B8F93 /* XCTest.framework */,
+				3B4BFA9B19A16E32003B8F93 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B4BFA9B19A16E32003B8F93 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B4BFA9C19A16E32003B8F93 /* AppKit.framework */,
+				3B4BFA9D19A16E32003B8F93 /* CoreData.framework */,
+				3B4BFA9E19A16E32003B8F93 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3B4BFA9F19A16E32003B8F93 /* TextFileXpander */ = {
+			isa = PBXGroup;
+			children = (
+				3B4BFAAB19A16E32003B8F93 /* AppDelegate.h */,
+				3B4BFAAC19A16E32003B8F93 /* AppDelegate.m */,
+				3B4BFAAE19A16E32003B8F93 /* MainMenu.xib */,
+				3B4BFAB119A16E32003B8F93 /* Images.xcassets */,
+				3B4BFAA019A16E32003B8F93 /* Supporting Files */,
+			);
+			name = TextFileXpander;
+			path = TextFileXpander;
+			sourceTree = "<group>";
+		};
+		3B4BFAA019A16E32003B8F93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B4BFAA119A16E32003B8F93 /* TextFileXpander-Info.plist */,
+				3B4BFAA219A16E32003B8F93 /* InfoPlist.strings */,
+				3B4BFAA519A16E32003B8F93 /* main.m */,
+				3B4BFAA719A16E32003B8F93 /* TextFileXpander-Prefix.pch */,
+				3B4BFAA819A16E32003B8F93 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B4BFABD19A16E32003B8F93 /* TextFileXpanderTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B4BFAC319A16E32003B8F93 /* TextFileXpanderTests.m */,
+				3B4BFABE19A16E32003B8F93 /* Supporting Files */,
+			);
+			name = TextFileXpanderTests;
+			path = TextFileXpanderTests;
+			sourceTree = "<group>";
+		};
+		3B4BFABE19A16E32003B8F93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B4BFABF19A16E32003B8F93 /* TextFileXpanderTests-Info.plist */,
+				3B4BFAC019A16E32003B8F93 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B4BFA9519A16E32003B8F93 /* TextFileXpander */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B4BFAC719A16E32003B8F93 /* Build configuration list for PBXNativeTarget "TextFileXpander" */;
+			buildPhases = (
+				3B4BFA9219A16E32003B8F93 /* Sources */,
+				3B4BFA9319A16E32003B8F93 /* Frameworks */,
+				3B4BFA9419A16E32003B8F93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextFileXpander;
+			productName = TextFileXpander;
+			productReference = 3B4BFA9619A16E32003B8F93 /* TextFileXpander.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B4BFAB619A16E32003B8F93 /* TextFileXpanderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B4BFACA19A16E32003B8F93 /* Build configuration list for PBXNativeTarget "TextFileXpanderTests" */;
+			buildPhases = (
+				3B4BFAB319A16E32003B8F93 /* Sources */,
+				3B4BFAB419A16E32003B8F93 /* Frameworks */,
+				3B4BFAB519A16E32003B8F93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B4BFABC19A16E32003B8F93 /* PBXTargetDependency */,
+			);
+			name = TextFileXpanderTests;
+			productName = TextFileXpanderTests;
+			productReference = 3B4BFAB719A16E32003B8F93 /* TextFileXpanderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B4BFA8E19A16E32003B8F93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = wanswings;
+				TargetAttributes = {
+					3B4BFAB619A16E32003B8F93 = {
+						TestTargetID = 3B4BFA9519A16E32003B8F93;
+					};
+				};
+			};
+			buildConfigurationList = 3B4BFA9119A16E32003B8F93 /* Build configuration list for PBXProject "TextFileXpander" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B4BFA8D19A16E32003B8F93;
+			productRefGroup = 3B4BFA9719A16E32003B8F93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B4BFA9519A16E32003B8F93 /* TextFileXpander */,
+				3B4BFAB619A16E32003B8F93 /* TextFileXpanderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B4BFA9419A16E32003B8F93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4BFAA419A16E32003B8F93 /* InfoPlist.strings in Resources */,
+				3B4BFAB219A16E32003B8F93 /* Images.xcassets in Resources */,
+				3B4BFAAA19A16E32003B8F93 /* Credits.rtf in Resources */,
+				3B4BFAB019A16E32003B8F93 /* MainMenu.xib in Resources */,
+				3B1DEC4119A20FBA00E8AF12 /* TextFileXpander.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4BFAB519A16E32003B8F93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4BFAC219A16E32003B8F93 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B4BFA9219A16E32003B8F93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4BFAAD19A16E32003B8F93 /* AppDelegate.m in Sources */,
+				3B4BFAA619A16E32003B8F93 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4BFAB319A16E32003B8F93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4BFAC419A16E32003B8F93 /* TextFileXpanderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B4BFABC19A16E32003B8F93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B4BFA9519A16E32003B8F93 /* TextFileXpander */;
+			targetProxy = 3B4BFABB19A16E32003B8F93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B4BFAA219A16E32003B8F93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B4BFAA319A16E32003B8F93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B4BFAA819A16E32003B8F93 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B4BFAA919A16E32003B8F93 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3B4BFAAE19A16E32003B8F93 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B4BFAAF19A16E32003B8F93 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		3B4BFAC019A16E32003B8F93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B4BFAC119A16E32003B8F93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B4BFAC519A16E32003B8F93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3B4BFAC619A16E32003B8F93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3B4BFAC819A16E32003B8F93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextFileXpander/TextFileXpander-Prefix.pch";
+				INFOPLIST_FILE = "TextFileXpander/TextFileXpander-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = TextFileXpander;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B4BFAC919A16E32003B8F93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextFileXpander/TextFileXpander-Prefix.pch";
+				INFOPLIST_FILE = "TextFileXpander/TextFileXpander-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = TextFileXpander;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3B4BFACB19A16E32003B8F93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextFileXpander.app/Contents/MacOS/TextFileXpander";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextFileXpander/TextFileXpander-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TextFileXpanderTests/TextFileXpanderTests-Info.plist";
+				PRODUCT_NAME = TextFileXpanderTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3B4BFACC19A16E32003B8F93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextFileXpander.app/Contents/MacOS/TextFileXpander";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextFileXpander/TextFileXpander-Prefix.pch";
+				INFOPLIST_FILE = "TextFileXpanderTests/TextFileXpanderTests-Info.plist";
+				PRODUCT_NAME = TextFileXpanderTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B4BFA9119A16E32003B8F93 /* Build configuration list for PBXProject "TextFileXpander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4BFAC519A16E32003B8F93 /* Debug */,
+				3B4BFAC619A16E32003B8F93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B4BFAC719A16E32003B8F93 /* Build configuration list for PBXNativeTarget "TextFileXpander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4BFAC819A16E32003B8F93 /* Debug */,
+				3B4BFAC919A16E32003B8F93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B4BFACA19A16E32003B8F93 /* Build configuration list for PBXNativeTarget "TextFileXpanderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4BFACB19A16E32003B8F93 /* Debug */,
+				3B4BFACC19A16E32003B8F93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B4BFA8E19A16E32003B8F93 /* Project object */;
+}
