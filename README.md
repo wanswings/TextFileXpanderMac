@@ -7,9 +7,9 @@ TextFileXpander
 Introduction
 --------------------
 TextFileXpander is a simple Menu Bar application for OS X.  
-Easy to paste your fixed phrase to the Pasteboard and user input field of current application if possible.
-Launch your default application for ".txt" when you click a file name.
-Magic words provides for cooperation with an external application.
+Easy to paste your fixed phrase to the Pasteboard and user input field of current application if possible.  
+Launch your default application for ".txt" when you click a file name.  
+Magic words provides for cooperation with an external application.  
 
 Requirement
 --------------------
@@ -19,7 +19,7 @@ Preparation
 --------------------
 1. Create a new folder and name it e.g. TextFileXpander.
 2. Create UTF-8 text files in your folder, like [this](https://github.com/wanswings/TextFileXpanderData/).
-3. Copy your folder to cloud storage if you want to share other platforms. We recommend Dropbox.
+3. Copy your folder to cloud storage if you want to share other platforms. We recommend Dropbox syncing to keep your data in sync with TextFileXpander.
 
 `TextFileXpander uses .txt extension only.`
 
@@ -50,6 +50,8 @@ How-To Use
 
 ![](https://raw.github.com/wanswings/TextFileXpanderMac/master/screenshots/screenshot5.png)
 
+`TextFileXpander is not automatic sync. Use "Refresh" of the menu item.`
+
 #### email.txt
 
     -------------------- paste
@@ -60,6 +62,12 @@ How-To Use
     email: jjj@kkk.lll
     email: mmm@nnn.ooo,ppp@qqq.rrr
     email: sss@ttt.uuu,vvv@www.xxx,yyy@zzz
+
+Uninstall
+--------------------
+1. Stop "Launch at startup" from TextFileXpander menu before removing.
+2. To remove TextFileXpander.app from your Applications folder.
+3. To remove an associated file(com.wanswings.TextFileXpander.plist) from your Library folder(~/Library/Preferences).
 
 Release Notes 
 --------------------
