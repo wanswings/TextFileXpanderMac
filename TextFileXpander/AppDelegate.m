@@ -67,7 +67,8 @@
     NSError *error = nil;
     NSRegularExpression *regexp = [NSRegularExpression regularExpressionWithPattern:pattern
                                         options:NSRegularExpressionCaseInsensitive error:&error];
-    NSTextCheckingResult *match = [regexp firstMatchInString:str options:0 range:NSMakeRange(0, str.length)];
+    NSTextCheckingResult *match = [regexp firstMatchInString:str
+                                        options:0 range:NSMakeRange(0, str.length)];
     if (match) {
         NSString *matchCmd = [str substringWithRange:[match rangeAtIndex:1]];
         NSLog(@"matchCmd: %@", matchCmd);
@@ -75,9 +76,10 @@
         NSLog(@"matchStr: %@", matchStr);
 
         NSString *sendStr = nil;
+        BOOL isSendPasteboard = NO;
 
-        if ([matchCmd isEqual:@"email"]) {
-            // email
+        if ([matchCmd isEqual:@"mailto"]) {
+            // mailto
             sendStr = [NSString stringWithFormat:@"mailto:%@", matchStr];
         }
         else if ([matchCmd isEqual:@"map"]) {
@@ -85,10 +87,45 @@
             sendStr = [@"http://maps.google.co.jp/maps?q=" stringByAppendingString:
                        [matchStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         }
+        else if ([matchCmd isEqual:@"people"]) {
+            // people
+            sendStr = @"addressbook://";
+            str = matchStr;
+            isSendPasteboard = YES;
+        }
+        else if ([matchCmd isEqual:@"route"]) {
+            // route
+            NSString *pattern2 = @"^\\s*from:\\s*(.+)\\s+to:\\s*(.+)";
+            NSRegularExpression *regexp2 = [NSRegularExpression regularExpressionWithPattern:pattern2
+                                                options:NSRegularExpressionCaseInsensitive error:&error];
+            NSTextCheckingResult *match2 = [regexp2 firstMatchInString:matchStr
+                                                options:0 range:NSMakeRange(0, matchStr.length)];
+            if (match2) {
+                NSString *matchfrom = [matchStr substringWithRange:[match2 rangeAtIndex:1]];
+                NSLog(@"matchfrom: %@", matchfrom);
+                NSString *matchto = [matchStr substringWithRange:[match2 rangeAtIndex:2]];
+                NSLog(@"matchto: %@", matchto);
+
+                NSMutableString *wk = [NSMutableString string];
+                [wk setString:@"http://maps.google.co.jp/maps?saddr="];
+                [wk appendString:[matchfrom stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                [wk appendString:@"&daddr="];
+                [wk appendString:[matchto stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                sendStr = wk;
+            }
+        }
+        else if ([matchCmd isEqual:@"url"]) {
+            // url
+            sendStr = matchStr;
+        }
         if (sendStr != nil) {
             NSLog(@"%@: %@", matchCmd, sendStr);
             [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:sendStr]];
-            return;
+            if (!isSendPasteboard) {
+                return;
+            }
+            // wait 1.0s
+            [NSThread sleepForTimeInterval:1.0];
         }
     }
 

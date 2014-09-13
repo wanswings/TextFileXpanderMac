@@ -52,16 +52,16 @@ How-To Use
 
 `TextFileXpander is not automatic sync. Use "Refresh" of the menu item.`
 
-#### email.txt
+#### mailto.txt
 
     -------------------- paste
     aaa@bbb.ccc
     ddd@eee.fff
     ggg@hhh.iii
     -------------------- launch email client
-    email: jjj@kkk.lll
-    email: mmm@nnn.ooo,ppp@qqq.rrr
-    email: sss@ttt.uuu,vvv@www.xxx,yyy@zzz
+    mailto: jjj@kkk.lll
+    mailto: mmm@nnn.ooo,ppp@qqq.rrr
+    mailto: sss@ttt.uuu,vvv@www.xxx,yyy@zzz
 
 Uninstall
 --------------------
@@ -71,6 +71,11 @@ Uninstall
 
 Release Notes 
 --------------------
+Version 1.1
+
+- Change the magic word "email" to "mailto".
+- Add some magic words.
+
 Version 1.0
 
 - First release.
