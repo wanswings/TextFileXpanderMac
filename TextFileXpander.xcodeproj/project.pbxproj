@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		3B1DEC4019A20FBA00E8AF12 /* TextFileXpander.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = TextFileXpander.icns; sourceTree = "<group>"; };
-		3B4BFA9619A16E32003B8F93 /* TextFileXpander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = TextFileXpander.app; path = TextFileXpander.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4BFA9619A16E32003B8F93 /* TextFileXpander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFileXpander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4BFA9919A16E32003B8F93 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3B4BFA9C19A16E32003B8F93 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		3B4BFA9D19A16E32003B8F93 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -47,7 +47,7 @@
 		3B4BFAAC19A16E32003B8F93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3B4BFAAF19A16E32003B8F93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3B4BFAB119A16E32003B8F93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3B4BFAB719A16E32003B8F93 /* TextFileXpanderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TextFileXpanderTests.xctest; path = TextFileXpanderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4BFAB719A16E32003B8F93 /* TextFileXpanderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextFileXpanderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4BFAB819A16E32003B8F93 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3B4BFABF19A16E32003B8F93 /* TextFileXpanderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextFileXpanderTests-Info.plist"; sourceTree = "<group>"; };
 		3B4BFAC119A16E32003B8F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -124,7 +124,6 @@
 				3B4BFAB119A16E32003B8F93 /* Images.xcassets */,
 				3B4BFAA019A16E32003B8F93 /* Supporting Files */,
 			);
-			name = TextFileXpander;
 			path = TextFileXpander;
 			sourceTree = "<group>";
 		};
@@ -146,7 +145,6 @@
 				3B4BFAC319A16E32003B8F93 /* TextFileXpanderTests.m */,
 				3B4BFABE19A16E32003B8F93 /* Supporting Files */,
 			);
-			name = TextFileXpanderTests;
 			path = TextFileXpanderTests;
 			sourceTree = "<group>";
 		};

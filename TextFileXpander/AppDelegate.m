@@ -78,7 +78,11 @@
         NSString *sendStr = nil;
         BOOL isSendPasteboard = NO;
 
-        if ([matchCmd isEqual:@"mailto"]) {
+        if ([matchCmd isEqual:@"dict"]) {
+            // dict
+            sendStr = [NSString stringWithFormat:@"dict://%@", matchStr];
+        }
+        else if ([matchCmd isEqual:@"mailto"]) {
             // mailto
             sendStr = [NSString stringWithFormat:@"mailto:%@", matchStr];
         }
@@ -223,10 +227,10 @@
                                                 style, NSParagraphStyleAttributeName,
                                                 nil];
 
-                NSDictionary *attrs = [fileManager attributesOfItemAtPath:fname error:&error];
-                if ([NSFileTypeRegular compare:[attrs objectForKey:NSFileType] ] && [fname hasSuffix:@".txt"]) {
+                NSString *fullPath = [dirPath stringByAppendingPathComponent:fname];
+                NSDictionary *attrs = [fileManager attributesOfItemAtPath:fullPath error:&error];
+                if ([[attrs objectForKey:NSFileType] isEqualToString:NSFileTypeRegular] && [fname hasSuffix:@".txt"]) {
                     // Only text file
-                    NSString *fullPath = [dirPath stringByAppendingPathComponent:fname];
                     NSString *fdata = [NSString stringWithContentsOfFile:fullPath
                                                     encoding:NSUTF8StringEncoding error:&error];
                     // Create submenu
