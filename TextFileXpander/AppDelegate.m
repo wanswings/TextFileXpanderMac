@@ -80,7 +80,8 @@
 
         if ([matchCmd isEqual:@"dict"]) {
             // dict
-            sendStr = [NSString stringWithFormat:@"dict://%@", matchStr];
+            sendStr = [@"dict://" stringByAppendingString:
+                       [matchStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         }
         else if ([matchCmd isEqual:@"mailto"]) {
             // mailto
@@ -88,7 +89,7 @@
         }
         else if ([matchCmd isEqual:@"map"]) {
             // map
-            sendStr = [@"http://maps.google.co.jp/maps?q=" stringByAppendingString:
+            sendStr = [@"http://maps.google.com/maps?q=" stringByAppendingString:
                        [matchStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         }
         else if ([matchCmd isEqual:@"people"]) {
@@ -111,17 +112,28 @@
                 NSLog(@"matchto: %@", matchto);
 
                 NSMutableString *wk = [NSMutableString string];
-                [wk setString:@"http://maps.google.co.jp/maps?saddr="];
+                [wk setString:@"http://maps.google.com/maps?saddr="];
                 [wk appendString:[matchfrom stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
                 [wk appendString:@"&daddr="];
                 [wk appendString:[matchto stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
                 sendStr = wk;
             }
         }
+        else if ([matchCmd isEqual:@"twitter"]) {
+            // twitter
+            sendStr = [@"twitter://post?message=" stringByAppendingString:
+                       [matchStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        }
         else if ([matchCmd isEqual:@"url"]) {
             // url
             sendStr = matchStr;
         }
+        else if ([matchCmd isEqual:@"youtube"]) {
+            // youtube
+            sendStr = [@"http://www.youtube.com/results?search_query=" stringByAppendingString:
+                       [matchStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        }
+
         if (sendStr != nil) {
             NSLog(@"%@: %@", matchCmd, sendStr);
             [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:sendStr]];
