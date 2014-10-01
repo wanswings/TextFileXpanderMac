@@ -54,15 +54,17 @@ How-To Use
 `TextFileXpander is not automatic sync. Use "Refresh" of the menu item.`
 
 #### mailto.txt
+```
+-------------------- paste
+aaa@bbb.ccc
+ddd@eee.fff
+ggg@hhh.iii
 
-    -------------------- paste
-    aaa@bbb.ccc
-    ddd@eee.fff
-    ggg@hhh.iii
-    -------------------- launch email client
-    mailto: jjj@kkk.lll
-    mailto: mmm@nnn.ooo,ppp@qqq.rrr
-    mailto: sss@ttt.uuu,vvv@www.xxx,yyy@zzz
+-------------------- launch email client
+mailto: jjj@kkk.lll
+mailto: mmm@nnn.ooo,ppp@qqq.rrr
+mailto: sss@ttt.uuu,vvv@www.xxx,yyy@zzz
+```
 
 Uninstall
 --------------------
@@ -70,8 +72,12 @@ Uninstall
 2. To remove TextFileXpander.app from your Applications folder.
 3. To remove an associated file(com.wanswings.TextFileXpander.plist) from your Library folder(~/Library/Preferences).
 
-Release Notes 
+Release Notes
 --------------------
+Version 1.4
+
+- Add some magic words.
+
 Version 1.3
 
 - Add some magic words.

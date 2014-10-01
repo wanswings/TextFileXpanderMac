@@ -83,6 +83,11 @@
             sendStr = [@"dict://" stringByAppendingString:
                        [matchStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         }
+        else if ([matchCmd isEqual:@"flight"]) {
+            // flight
+            sendStr = [@"http://www.google.com/search?q=flight%20" stringByAppendingString:
+                       [matchStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        }
         else if ([matchCmd isEqual:@"mailto"]) {
             // mailto
             sendStr = [NSString stringWithFormat:@"mailto:%@", matchStr];
@@ -119,6 +124,10 @@
                 sendStr = wk;
             }
         }
+        else if ([matchCmd isEqual:@"tel"]) {
+            // tel
+            str = matchStr;
+        }
         else if ([matchCmd isEqual:@"twitter"]) {
             // twitter
             sendStr = [@"twitter://post?message=" stringByAppendingString:
@@ -127,6 +136,11 @@
         else if ([matchCmd isEqual:@"url"]) {
             // url
             sendStr = matchStr;
+        }
+        else if ([matchCmd isEqual:@"weather"]) {
+            // weather
+            sendStr = [@"http://www.weather.com/search/enhancedlocalsearch?where=" stringByAppendingString:
+                       [matchStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         }
         else if ([matchCmd isEqual:@"youtube"]) {
             // youtube
