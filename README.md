@@ -10,7 +10,7 @@ TextFileXpander is a simple Menu Bar application for OS X.
 Easy to paste your fixed phrase to the Pasteboard and user input field of current application if possible.  
 Launch your default application for ".txt" when you click a file name.  
 Magic words provides for cooperation with an external application.  
-Share with your Mac, Windows, iOS and Android devices.  
+Share with your Mac, Windows, iOS and Android devices using Dropbox or Google Drive.  
 
 Requirement
 --------------------
@@ -74,6 +74,10 @@ Uninstall
 
 Release Notes
 --------------------
+Version 1.5
+
+- Add some magic words.
+
 Version 1.4
 
 - Add some magic words.

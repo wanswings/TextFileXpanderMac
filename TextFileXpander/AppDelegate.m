@@ -97,11 +97,21 @@
             sendStr = [@"http://maps.google.com/maps?q=" stringByAppendingString:
                        [matchStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         }
+        else if ([matchCmd isEqual:@"near"]) {
+            // near
+            sendStr = [@"http://foursquare.com/explore?near=" stringByAppendingString:
+                       [matchStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        }
         else if ([matchCmd isEqual:@"people"]) {
             // people
             sendStr = @"addressbook://";
             str = matchStr;
             isSendPasteboard = YES;
+        }
+        else if ([matchCmd isEqual:@"recipe"]) {
+            // recipe
+            sendStr = [@"http://www.epicurious.com/tools/searchresults?search=" stringByAppendingString:
+                       [matchStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         }
         else if ([matchCmd isEqual:@"route"]) {
             // route
