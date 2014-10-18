@@ -251,18 +251,18 @@
         NSArray *list = [fileManager contentsOfDirectoryAtPath:dirPath error:&error];
         list = [list sortedArrayUsingSelector:@selector(compare:)];
 
-        NSString *pattern = @"^(-{2}-+)\\s*(.*)";
-        NSRegularExpression *regexp = [NSRegularExpression regularExpressionWithPattern:pattern
+        NSString *pattern1 = @"^(-{2}-+)\\s*(.*)";
+        NSRegularExpression *regexp1 = [NSRegularExpression regularExpressionWithPattern:pattern1
                                                             options:NSRegularExpressionCaseInsensitive error:&error];
+        NSString *pattern2 = @"^marker:(strong:|weak:)?\\s*(.+)";
+        NSRegularExpression *regexp2 = [NSRegularExpression regularExpressionWithPattern:pattern2
+                                                            options:NSRegularExpressionCaseInsensitive error:&error];
+
+        NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        [style setLineBreakMode:NSLineBreakByTruncatingTail];
         BOOL existData = NO;
         for (NSString *fname in list) {
             @autoreleasepool {
-                NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-                [style setLineBreakMode:NSLineBreakByTruncatingTail];
-                NSDictionary *paragraphStyle = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                                style, NSParagraphStyleAttributeName,
-                                                nil];
-
                 NSString *fullPath = [dirPath stringByAppendingPathComponent:fname];
                 NSDictionary *attrs = [fileManager attributesOfItemAtPath:fullPath error:&error];
                 if ([[attrs objectForKey:NSFileType] isEqualToString:NSFileTypeRegular] && [fname hasSuffix:@".txt"]) {
@@ -273,18 +273,47 @@
                     NSMenu *submenu = [[NSMenu alloc] init];
                     __block BOOL existSubData = NO;
                     __block int idxSub = 0;
+                    __block NSColor *fg;
                     [fdata enumerateLinesUsingBlock:^(NSString *line, BOOL *stop) {
                         if (line.length > 0) {
                             existSubData = YES;
                             @autoreleasepool {
-                                ;
-                                NSTextCheckingResult *match = [regexp firstMatchInString:line options:0 range:NSMakeRange(0, line.length)];
-                                if (match) {
+                                NSTextCheckingResult *match1 = [regexp1 firstMatchInString:line
+                                                                                   options:0 range:NSMakeRange(0, line.length)];
+                                if (match1) {
                                     NSMenuItem *subItem = [NSMenuItem separatorItem];
                                     [submenu addItem:subItem];
                                     idxSub++;
                                 }
                                 else {
+                                    NSTextCheckingResult *match2 = [regexp2 firstMatchInString:line
+                                                                                       options:0 range:NSMakeRange(0, line.length)];
+                                    if (match2) {
+                                        if ([match2 rangeAtIndex:1].length == 0) {
+                                            fg = [NSColor blueColor];
+                                        }
+                                        else {
+                                            NSString *matchCmd = [line substringWithRange:[match2 rangeAtIndex:1]];
+                                            if ([matchCmd isEqual:@"strong:"]) {
+                                                fg = [NSColor redColor];
+                                            }
+                                            else if ([matchCmd isEqual:@"weak:"]) {
+                                                fg = [NSColor lightGrayColor];
+                                            }
+                                            else {
+                                                fg = [NSColor blueColor];
+                                            }
+                                        }
+                                        line = [line substringWithRange:[match2 rangeAtIndex:2]];
+                                    }
+                                    else {
+                                        fg = [NSColor blackColor];
+                                    }
+                                    NSDictionary *paragraphStyle = [NSDictionary dictionaryWithObjectsAndKeys:
+                                                                    style, NSParagraphStyleAttributeName,
+                                                                    fg, NSForegroundColorAttributeName,
+                                                                    nil];
+
                                     NSAttributedString *itemName =
                                         [[NSAttributedString alloc] initWithString:line attributes:paragraphStyle];
                                     NSMenuItem *subItem =

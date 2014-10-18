@@ -74,6 +74,10 @@ Uninstall
 
 Release Notes
 --------------------
+Version 2.0
+
+- Add "marker" magic word.
+
 Version 1.5
 
 - Add some magic words.
