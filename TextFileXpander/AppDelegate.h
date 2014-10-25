@@ -14,6 +14,7 @@
     NSStatusItem *fpItem;
     NSMenu *fpMenu;
     int idxLaunchAtStartup;
+    NSString *appName;
 }
 
 @end

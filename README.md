@@ -74,6 +74,14 @@ Uninstall
 
 Release Notes
 --------------------
+Version 2.1
+
+- Add "currency:" magic word.
+- Change the site for "flight:" magic word.
+- Modify "route:" magic word, add "from: here".
+- Change the site for "weather:" magic word.
+- Add About TextFileXpander
+
 Version 2.0
 
 - Add "marker" magic word.
